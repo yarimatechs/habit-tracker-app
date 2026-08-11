@@ -6,3 +6,5 @@ web-build/
 .env
 *.log
 .DS_Store
+temp-scaffold/
+temp-scaffold2/

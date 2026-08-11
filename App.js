@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import AuthScreen from './src/screens/AuthScreen';
+import HomeScreen from './src/screens/HomeScreen';
 import { getCurrentUser, onAuthStateChange } from './src/data/auth';
 
 export default function App() {
@@ -32,12 +33,7 @@ export default function App() {
     return <AuthScreen onAuthSuccess={setUser} />;
   }
 
-  // Placeholder until HomeScreen is built in the next step
-  return (
-    <View style={styles.loading}>
-      <ActivityIndicator size="large" color="#2563EB" />
-    </View>
-  );
+  return <HomeScreen onAddHabit={() => {}} onSignedOut={() => setUser(null)} />;
 }
 
 const styles = StyleSheet.create({
